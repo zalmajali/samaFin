@@ -1,0 +1,10 @@
+<ion-content>
+  <div class="largBox">
+      <div class="smallBox">
+          <ion-datetime locale="en-US" [min]="minDate" *ngIf="useDate==0" [isDateEnabled]="isDateEnabled"  [presentation]="typeUs!=0 ? 'date' : 'date-time'" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md' (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)"></ion-datetime>
+          <ion-datetime locale="en-US" [min]="minDate" *ngIf="useDate==1" [presentation]="typeUs!=0 ? 'date' : 'date-time'" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md' (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)"></ion-datetime>
+          <ion-datetime locale="en-US"  *ngIf="useDate==2" [presentation]="typeUs!=0 ? 'date' : 'date-time'" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md' (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)"></ion-datetime>
+          <ion-datetime locale="en-US" [min]="minDateServ" *ngIf="useDate==3" [presentation]="typeUs!=0 ? 'date' : 'date-time'" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md' (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)"></ion-datetime>
+        </div>
+  </div>
+</ion-content>
